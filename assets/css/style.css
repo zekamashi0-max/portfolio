@@ -561,16 +561,27 @@ header {
   }
 
   /* ワークセクション */
-  .work-card {
+  .work-card a {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .work-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .work-text h3 {
+    border-bottom: 2px solid #BDB76B;
+    max-width: 430px;
+    margin: 0 auto 12px;
   }
   
   .work-img img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     aspect-ratio: 1 / 1;
   }

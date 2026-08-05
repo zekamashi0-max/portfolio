@@ -88,7 +88,7 @@ header {
   writing-mode: vertical-rl;
 }
 
-/* ハンバーガーメニュー */
+/* グローバルナビゲーション */
 .hamburger {
   display: flex;
   justify-content: flex-end;
@@ -316,11 +316,6 @@ header {
   margin: 0;
 }
 
-.work-img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .work-img img {
   width: 300px;
   height: 300px;
@@ -329,6 +324,12 @@ header {
   border-radius: 8px;
   background-color: #ccc;
   display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card a:hover .work-img img {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -443,10 +444,17 @@ header {
 }
 
 
-/* レスポンシブ */
+/* ==========================================
+   レスポンシブ (画面幅 900px 以下)
+   ========================================== */
 @media (max-width: 900px) {
 
-  /* ナビゲーション */
+  .section-title {
+    font-size: 30px;
+    padding: 60px 20px 30px;
+  }
+
+  /* ナビゲーションメニュー */
   .nav-menu {
     position: fixed;
     top: 0;
@@ -470,7 +478,7 @@ header {
   .menu-list {
     flex-direction: column;
     gap: 30px;
-    font-size: 32px;
+    font-size: 24px;
     text-align: center; 
     width: 100%;
     max-width: 100%;
@@ -530,58 +538,40 @@ header {
     bottom: 5%;
   }
 
-  .portfolio-title,
-  .portfolio-title02 {
-    font-size: 42px;
-  }
   .portfolio-title {
+    font-size: 40px;
     top: 30%;
     left: 55%;
   }
+
   .portfolio-title02 {
-    top: 55%;
+    font-size: 40px;
+    top: 60%;
     left: 45%;
   }
 
   /* アバウトセクション */
   .yoshito-card {
-    width: 100%;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 20px;
   }
 
-  .name, .my-name {
+  .my-name, .name, .self {
     text-align: center;
-  }
-
-  .self {
-    width: 100%;
-    text-align: left;
   }
 
   /* ワークセクション */
   .work-card a {
-    width: 100%;
     flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .work-text {
-    width: 100%;
+    gap: 20px;
     text-align: center;
   }
 
-  .work-text h3 {
-    border-bottom: 2px solid #BDB76B;
-    max-width: 40px;
-    margin: 0 auto 12px;
-  }
-  
   .work-img img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
     aspect-ratio: 1 / 1;
   }

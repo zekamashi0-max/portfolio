@@ -1,0 +1,577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: serif;
+  line-height: 1.6;
+  background: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section-title {
+  font-size: 40px;
+  text-align: center;
+  padding: 80px 20px 40px;
+  color: #fff; 
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 5%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ヘッダー */
+header {
+  height: 100svh;
+  position: relative;
+  background: url(../img/img1.jpg) center/cover no-repeat;
+  width: 100%;
+}
+
+.job-name {
+  font-size: 30px;
+  line-height: 1.5;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 8%;
+  left: 5%;
+  transform: none;
+}
+
+.portfolio-title {
+  font-size: 60px;
+  line-height: 1.5;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-rl;
+}
+
+.apos {
+  text-orientation: sideways;
+}
+
+.alpha-s {
+  text-orientation: upright;
+}
+
+.portfolio-title02 {
+  font-size: 60px;
+  line-height: 1.5;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(13, 13, 13, 0.85);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.menu-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-list a:hover {
+  color: #BDB76B;
+}
+
+.menu-btn {
+  display: none;
+}
+
+
+/* アバウトセクション */
+.section-about {
+  background-color: #0d0d0d;
+}
+
+.yoshito-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.yoshito-img {
+  flex-shrink: 0;
+}
+
+.yoshito-img img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #ccc;
+  display: block;
+}
+
+.yoshito-txt {
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 16px;
+  color: #777;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.my-name {
+  font-size: 28px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.self {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* スキルセクション */
+.skill-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.skill-box {
+  max-width: 100%;
+  margin-bottom: 12px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  overflow: hidden;
+  contain: content;
+}
+
+.skill-box summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 2rem;
+  padding-right: 4rem;
+  color: #333333;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+.skill-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.skill-box summary::before,
+.skill-box summary::after {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  margin-top: -0.45rem;
+  width: 3px;
+  height: 0.9rem;
+  border-radius: 5px;
+  background-color: #c2c2c2;
+  content: '';
+}
+
+.skill-box summary::before {
+  transform: rotate(90deg);
+}
+
+.skill-box summary::after {
+  transition: transform .3s;
+}
+
+.skill-box[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.skill-box .content {
+  transform: translateY(-10px);
+  opacity: 0;
+  padding: 0.5rem 2rem 1.5rem;
+  transition: transform .4s, opacity .4s;
+}
+
+.skill-box[open] .content {
+  transform: none;
+  opacity: 1;
+}
+
+.skill-box .content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444444;
+  margin-top: 0;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.skill-box .content p:last-child {
+  margin-bottom: 0;
+}
+
+.skill-box .content p::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+/* ワークセクション */
+.work-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px; 
+}
+
+.work-card a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
+}
+
+.work-text {
+  flex-grow: 1;
+}
+
+.work-text h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #BDB76B; 
+  transition: color 0.3s ease;
+}
+
+.work-card a:hover .work-text h3 {
+  color: #BDB76B; 
+}
+
+.work-text p {
+  color: #aaa; 
+  font-size: 14px;
+  font-family: monospace; 
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.work-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.work-img img {
+  width: 300px;
+  height: 300px;
+  border: solid 10px #BDB76B;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #ccc;
+  display: block;
+}
+
+
+/* お問い合わせ */
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #000; 
+  background: url(../img/img2.jpg) center/cover no-repeat;
+  width: 100%;
+}
+
+.section-contact .section-title {
+  color: #000; 
+}
+
+.section-contact .container {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info {
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  font-size: 2.0rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.contact-info p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  color: #000; 
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  color: #000; 
+  background-color: #fff;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 30px auto 0;
+  color: #fff;
+  background: #BDB76B;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 3rem 0;
+  color: #fff;
+}
+
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+
+  /* ナビゲーション */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(13, 13, 13, 0.95);
+    padding: 100px 20px 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99; 
+  }
+
+  .nav-menu.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    gap: 30px;
+    font-size: 32px;
+    text-align: center; 
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  /* ハンバーガーボタン表示 */
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    z-index: 100;
+  }
+
+  .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .navicon:before,
+  .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+  .navicon:before { top: 8px; }
+  .navicon:after { top: -8px; }
+
+  .menu-btn.is-active .navicon {
+    background: transparent;
+  }
+  .menu-btn.is-active .navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .menu-btn.is-active .navicon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /* ヘッダー */
+  .job-name {
+    font-size: 18px;
+    left: 5%;
+    bottom: 5%;
+  }
+
+  .portfolio-title,
+  .portfolio-title02 {
+    font-size: 42px;
+  }
+  .portfolio-title {
+    top: 30%;
+    left: 55%;
+  }
+  .portfolio-title02 {
+    top: 55%;
+    left: 45%;
+  }
+
+  /* アバウトセクション */
+  .yoshito-card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .name, .my-name {
+    text-align: center;
+  }
+
+  .self {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* ワークセクション */
+  .work-card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .work-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}

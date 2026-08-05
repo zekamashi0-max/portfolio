@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: serif;
+  line-height: 1.6;
+  background: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 5%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 40px;
+  text-align: center;
+  padding: 80px 20px 40px;
+  color: #fff; 
+}
+
+/* ヘッダー */
+header {
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(13, 13, 13, 0.85);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.menu-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-list a:hover {
+  color: #BDB76B;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* ワークセクション */
+.section-work {
+  padding: 60px 0;
+}
+
+.work-title {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  border-left: 4px solid #BDB76B;
+  padding-left: 15px;
+}
+
+.work-detail-content {
+  display: flex;
+  gap: 40px;               
+  align-items: flex-start; 
+}
+
+.work-img {
+  flex-shrink: 0;         
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #ccc;
+  display: block;
+}
+
+.work-detail {
+  flex-grow: 1;           
+}
+
+.work-detail h3 {
+  font-size: 1.8rem;
+  color: #BDB76B; 
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.work-detail p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.work-link-container {
+  margin-top: 30px;
+}
+
+.btn-work-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #BDB76B;
+  color: #0d0d0d;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-work-link:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.work-detail > *:last-child {
+  margin-bottom: 0; 
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 10rem 0;
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+
+  /* ハンバーガーメニュー */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(13, 13, 13, 0.95);
+    padding: 100px 20px 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99; 
+  }
+
+  .nav-menu.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    gap: 30px;
+    font-size: 32px;
+    text-align: center; 
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    z-index: 100;
+  }
+
+  .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .navicon:before,
+  .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+  
+  .navicon:before { top: 8px; }
+  .navicon:after { top: -8px; }
+
+  .menu-btn.is-active .navicon {
+    background: transparent;
+  }
+  
+  .menu-btn.is-active .navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+  .menu-btn.is-active .navicon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /* ワークセクション */
+  .work-detail-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .work-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .work-detail {
+    text-align: left;
+    width: 100%;
+  }
+
+  .work-title,
+  .work-detail h3,
+  .fitness-link-container {
+    text-align: center;
+  }
+}

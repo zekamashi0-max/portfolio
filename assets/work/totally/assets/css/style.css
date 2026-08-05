@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.selectbox {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+/*.selectbox::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}*/
+
+.nav {
+	overflow-x: auto;
+  max-width: 800px;
+  display: flex;
+  margin: 0 auto 16px;
+}
+.nav ul {
+	display: flex;
+	width: max-content;
+	/* margin: 0 auto; */
+}
+.nav ul li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: inline-block;
+	padding: 16px 14px;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+/* 余白設定 */
+.container {
+  padding: 0 16px;
+  max-width: 1000px;
+}
+
+.product-grid {
+  max-width: 800px;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 3px;
+}
+
+/* ロゴ */
+.logo {
+  width: 109px;
+  height: auto;
+  margin: 36px auto 26px;
+}
+
+/* リンクセクション */
+.section-link {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* margin-bottom: 26px; */
+  /* border-bottom: 1px solid #4b4b4b; */
+  /* border-bottom: none; */
+  max-width: 1000px;
+  margin: 0 auto 26px;
+}
+
+/* プロダクトセクション */
+.img {
+  width: 100%;
+  height: 468px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.6rem;
+  color: #333;
+  border-top: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+  padding: 20px 0;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.text {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.price {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+/* 商品の表 */
+.list table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom:20px;
+}
+
+.list th {
+  padding: 1rem;
+  text-align: center;
+  border-right: 1px solid #c3c3c3;
+  border-radius: 0;
+  font-weight: normal;
+  width: 68px;
+  font-size: 1.2rem;
+}
+
+.list td {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-radius: 0;
+  font-size: 1.2rem;
+}
+
+.list td:last-child {
+  border-right: none;
+  width: 204px;
+} 
+
+/* ボタン */
+.submit-btn {
+  width: 343px;
+  background-color: #4b4b4b;
+  color: #fff;
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(13px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  filter: invert(100%);
+}
+
+/* サイズ表 */
+.list2 table {
+  border-collapse: collapse;
+  background-color: #ecebeb;
+  margin-bottom: 110px;
+}
+
+.list2 th,
+.list2 td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #c3c3c3;
+  font-size: 1.2rem;
+}
+
+.list2 th {
+  font-weight: normal;
+  width: 52px;
+}
+
+.list2 td {
+  background-color: #fff;
+  width: 96px;
+}
+
+
+/* フッター */
+.footer {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*==== レスポンシブブレークポイント ====*/
+@media (min-width: 896px) {
+  .container {
+    /* display: flex; */
+    
+    /* justify-content: center; */
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .section-link { 
+    /* max-width: 1000px;
+    justify-content: space-around;
+    border-bottom: 1px solid #c3c3c3; */
+    /* margin-left:140px; */
+    margin: 0 auto 50px;
+    border-bottom: 1px solid #c3c3c3;
+  }
+
+  .nav {
+    overflow-x: visible;
+    justify-content: space-between;
+    
+  }
+
+  .login {
+    /* margin-left: 355px; */
+  }
+
+  .product-grid {
+    margin: 0 auto;
+  }
+
+  .img-grid {
+    flex: 1;
+  }
+
+  .product-detail {
+    flex: 1;
+  }
+
+  .product-detail-container {
+    /* max-width: 800px; */
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    /* margin-left: 240px; */
+  }
+
+  /* .img-grid {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    } */
+}

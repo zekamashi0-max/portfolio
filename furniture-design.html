@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOSHITO'S PORTFOLIO</title>
+    <link rel="stylesheet" href="./assets/css/work-style.css">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header id="home" class="site-header">
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <button class="menu-btn" aria-label="メニューを開閉する" aria-expanded="false">
+                <span class="navicon"></span>
+            </button>
+            <!-- メニュー項目 -->
+            <nav class="nav-menu">
+                <ul class="menu-list">
+                     <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./index.html#work">Work</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ワークセクション -->
+    <section id="work" class="section-work">
+        <div class="container">
+            <div class="work-grid">
+                
+                <!-- ワークアイテム -->
+                <article class="work"></article>
+                    <h2 class="work-title">架空のブランドサイト（インテリア）</h2>
+                    
+                    <div class="work-detail-content"> 
+                        <div class="work-img">
+                            <img src="./assets/img/work-img2.png" alt="架空のブランドサイトのイメージ" class="work-img">
+                        </div>
+                        <div class="work-detail">
+                            <h3>プロジェクト概要</h3>
+                            <p>制作期間：【3週間 / 60時間】</p>
+                            <p>担当範囲：コーディング全般、複数ページの実装</p>
+                            <p>使用言語：HTML/CSS、JavaScript</p>
+                            
+                            <h3>実装で苦労した点</h3>
+                            <p>初めての複数ページのデザインカンプだったので、デスクトップ画面からスマホ画面へのレスポンシブデザインの崩れや、ブレイクポイントの見極めに苦労しました。</p>
+                            <p>ハンバーガーメニューの実装とJavaScriptのコーディングも初めてでした。ボタンが閉じている時にバーが消えてしまったり、展開時に上手くバツにならない事があり、
+                                フォントカラーや座標を1px単位で調整して動くようにしました。また、メニュー展開時の色とbackgroundカラーの明暗や透明度も、何度も細かく数値を調整して実装しました</p>
+                            <div class="work-link-container">
+                                <a href="./assets/work/furniture design/products.html" class="btn-work-link">架空のブランドサイト（インテリア）を見る</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>  
+                  
+            </div> 
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 YOSHITO'S PORTFOLIO All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
